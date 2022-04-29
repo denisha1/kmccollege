@@ -1,0 +1,121 @@
+<html>
+
+<head>
+  <title>welcome</title>
+  <style>
+    #main_heading {
+      color: blue;
+      background-color: black;
+      border: 2px solid;
+      padding: 4px;
+    }
+
+    .image {
+      height: 200px;
+      width: 300px;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h1 class="bg-info p-3 text-center" id="college_name">KMC college</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="student_details.html">Student Detail</a>
+            </li>
+  
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="calculator.html">Calculator</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="increasedecrease.html">increasedecrease</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another Action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"  href="student_details.html" tabindex="-1"
+                   aria-disabled="true">Student Detail</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="search" aria-label="Search">
+            <button class="btn btn-outline-sucesss" type="submit"> Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <hr>
+    <h1>Increase and Decrease Tool</h1>
+    <p>Enjoy using this tool</p>
+    <hr>
+    <button type="button" id="increase_btn" class="btn btn-primary">Increase Size</button>
+  <br><br>
+  <button type="button" id="decrease_btn" class="btn btn-danger">Decrease Size</button>
+  <img src="college.jpg" id="image" alt="slideshow1" height="200" width="200">
+  <br><br>
+  <hr>
+  <footer class="text-center bg-info p-3">
+    <p>KMC College</p>
+    <p><a href="mailto:hege@example.com">info@ktmmodelcollege.edu.np</a></p>
+    <p>phone:+977-1-4242121, 4242015</p>
+    <p>Adress: Bagbazar, Kathmandu, Nepal</p>
+  </footer>
+
+  
+  </body>
+  <script>
+    var paragraph = document.getElementsByClassName("paragraph_content");
+    for (var i = 0; i < paragraph.length; i++) {
+      paragraph[i].style.color = "red";
+    }
+    document.getElementById("increase_btn").addEventListener("click", function () {
+      document.getElementById("image").height = document.getElementById("image").height + 50;
+      document.getElementById("image").width = document.getElementById("image").width + 50;
+  
+    });
+  
+    document.getElementById("decrease_btn").addEventListener("click", function () {
+      document.getElementById("image").height = document.getElementById("image").height - 50;
+      document.getElementById("image").width = document.getElementById("image").width - 50;
+    });
+    </script>
+    </html>
